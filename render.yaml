@@ -7,15 +7,11 @@ services:
     envVars:
       - key: PORT
         value: "8080"
-      - key: akash
+      - key: SETUP_PASSWORD
         sync: false
       - key: OPENCLAW_STATE_DIR
-        value: /data/.openclaw
+        value: /home/node/.openclaw
       - key: OPENCLAW_WORKSPACE_DIR
-        value: /data/workspace
+        value: /home/node/workspace
       - key: OPENCLAW_GATEWAY_TOKEN
         generateValue: true
-    disk:
-      name: openclaw-data
-      mountPath: /data
-      sizeGB: 1
